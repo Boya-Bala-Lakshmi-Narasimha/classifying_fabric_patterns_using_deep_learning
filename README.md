@@ -1,1 +1,0 @@
-# classifying_fabric_patterns_using_deep_learning
