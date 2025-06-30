@@ -32,5 +32,5 @@ prediction = model.predict(img_array)
 predicted_class = np.argmax(prediction, axis=1)
 
 # Replace class labels with your actual folder names
-class_labels = ["cotton", "wool"]  # Example - adjust this
+class_labels = ['checked', 'dotted', 'floral', 'plain', 'striped']# Example - adjust this
 print(f"✅ Step 5: Predicted class is: {predicted_class[0]} → {class_labels[predicted_class[0]]}")
