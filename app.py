@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 # Load the model
 model = load_model("fabric_model.h5")
-class_labels = ["cotton", "wool", "silk", "polyester", "linen"]  # Update this based on your classes
+class_labels = ['checked', 'dotted', 'floral', 'plain', 'striped'] # Update this based on your classes
 
 st.title("🧵 Fabric Classifier")
 st.write("Upload a fabric image to predict its type")
