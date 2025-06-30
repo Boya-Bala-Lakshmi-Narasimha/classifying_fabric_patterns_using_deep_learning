@@ -10,7 +10,7 @@ from PIL import Image, ImageTk
 model = load_model("fabric_model.h5")
 
 # Class names (update if more classes are used)
-class_labels = ["cotton", "wool"]
+class_labels = ['checked', 'dotted', 'floral', 'plain', 'striped']
 
 def predict_image():
     file_path = filedialog.askopenfilename()
