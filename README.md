@@ -121,7 +121,7 @@ pip install -r requirements.txt
 
 ## 🙋‍♀️ Author
 
-Developed by \[Your Name]
+Developed by \[Boya Bala Lakshmi Narasimha]
 
 ---
 
