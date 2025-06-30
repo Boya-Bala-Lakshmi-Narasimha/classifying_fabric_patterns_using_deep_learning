@@ -69,7 +69,7 @@ Make sure `test_image.jpg` exists in the same directory.
 ### 4. GUI App (Optional)
 
 ```bash
-python gui_demo.py
+python -m pip install streamlit
 ```
 
 A Tkinter GUI will open where you can upload an image and see the predicted class.
@@ -77,7 +77,7 @@ A Tkinter GUI will open where you can upload an image and see the predicted clas
 ### 5. Streamlit Web App (Optional)
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 You can test predictions via a browser interface.
