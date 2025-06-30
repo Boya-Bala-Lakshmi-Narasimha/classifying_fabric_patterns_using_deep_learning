@@ -1,134 +1,70 @@
-# Fabric Pattern Classification using Deep Learning (CNN)
+Classifying Fabric Patterns Using Deep Learning
+This project classifies fabric patterns into five categories using a Convolutional Neural Network (CNN): Checked, Dotted, Floral, Plain, and Striped.
+📂 Project Structure
 
-This project uses a **Convolutional Neural Network (CNN)**, a type of **deep learning model**, to classify different types of fabric patterns using image data.
+classifying_fabric_patterns_using_deep_learning/
+├── dataset/
+│   ├── checked/
+│   ├── dotted/
+│   ├── floral/
+│   ├── plain/
+│   └── striped/
+├── img_preprocessing.py
+├── model_building.py
+├── train_model.py
+├── predict.py
+├── app.py
+├── gui_demo.py
+├── data_collection.py
+├── evaluate_model.py
+├── fabric_model.h5
+├── README.md
+└── test_image.jpg
 
-## 📌 Project Description
 
-This deep learning project aims to automatically classify fabric images into categories:
+🔧 Requirements
 
-* Cotton
-* Wool
-* Silk
-* Denim
-* Nylon
+- Python 3.8+
+- TensorFlow / Keras
+- NumPy
+- Matplotlib
+- Streamlit (for GUI)
+- OpenCV (optional for image handling)
 
-The CNN model learns from training data and predicts the fabric type by analyzing the texture and pattern features of images.
 
----
-
-## 📁 Dataset Structure
-
-The dataset is structured with separate folders for training and validation:
-
-```
-dataset/
-├── train/
-│   ├── cotton/
-│   ├── wool/
-│   ├── silk/
-│   ├── denim/
-│   └── nylon/
-└── val/
-    ├── cotton/
-    ├── wool/
-    ├── silk/
-    ├── denim/
-    └── nylon/
-```
-
-Each folder contains `.jpg` images of that specific fabric class.
-
----
-
-## ⚙️ How to Run
-
-### 1. Install Dependencies
-
-```bash
-pip install tensorflow numpy matplotlib pillow
-```
-
-### 2. Train the Model
-
-```bash
-python train_model.py
-```
-
-This will train the CNN model and save it as `fabric_model.h5`.
-
-### 3. Make Predictions
-
-You can test the model using:
-
-```bash
-python predict.py
-```
-
-Make sure `test_image.jpg` exists in the same directory.
-
-### 4. GUI App (Optional)
-
-```bash
-python -m pip install streamlit
-```
-
-A Tkinter GUI will open where you can upload an image and see the predicted class.
-
-### 5. Streamlit Web App (Optional)
-
-```bash
-python -m streamlit run app.py
-```
-
-You can test predictions via a browser interface.
-
----
-
-## 🧠 Model Architecture
-
-This CNN model includes the following layers:
-
-* Conv2D (32 filters)
-* MaxPooling2D
-* Conv2D (64 filters)
-* MaxPooling2D
-* Flatten
-* Dense (128)
-* Dropout
-* Dense (Output: 5 classes, Softmax)
-
-**Loss Function:** Categorical Crossentropy
-**Optimizer:** Adam
-
----
-
-## 📦 Requirements
-
-* Python 3.x
-* TensorFlow
-* NumPy
-* Pillow
-* Matplotlib
-* (Optional) Streamlit
-
-You can install all at once using:
-
-```bash
+Install all dependencies:
 pip install -r requirements.txt
-```
+🧠 How It Works
 
----
+1. Image Preprocessing (img_preprocessing.py): Loads dataset and splits into training and validation using ImageDataGenerator.
+2. Model Building (model_building.py): Defines and compiles the CNN architecture.
+3. Model Training (train_model.py): Trains the model and saves it as fabric_model.h5.
+4. Prediction (predict.py): Predicts a fabric class for a test image.
+5. GUI Demo (app.py): Streamlit interface for image classification.
 
-## 🙋‍♀️ Author
 
-Developed by \[Boya Bala Lakshmi Narasimha]
+🚀 Run the Project
+1. Train the Model
+python train_model.py
+2. Predict a Test Image
+python predict.py
+3. Run Streamlit App
+streamlit run app.py
+🧪 Sample Output
 
----
+Classes detected: {'checked': 0, 'dotted': 1, 'floral': 2, 'plain': 3, 'striped': 4}
+Predicted Class: Floral
+Confidence: 94.67%
 
-## 📜 License
 
-This project is open-source and free to use for educational purposes.
+📈 Accuracy and Evaluation
+You can visualize training accuracy/loss and evaluate model performance using:
+python evaluate_model.py
+📽️ Demo Video
+Coming soon... (Include a YouTube or Google Drive link here)
+👨‍💻 Author
+Boya Bala Lakshmi Narasimha
+GitHub: https://github.com/Boya-Bala-Lakshmi-Narasimha
+📄 License
+This project is licensed under the MIT License - feel free to use, modify, and share it.
 
----
-
-Feel free to improve the model, add more fabric types, or deploy it as a web application!
