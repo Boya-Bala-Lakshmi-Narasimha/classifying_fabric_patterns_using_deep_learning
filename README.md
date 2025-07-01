@@ -25,7 +25,6 @@ classifying_fabric_patterns_using_deep_learning/
 ├── train_model.py
 ├── predict.py
 ├── app.py
-├── gui_demo.py
 ├── data_collection.py
 ├── evaluate_model.py
 ├── fabric_model.h5
@@ -88,7 +87,7 @@ python predict.py
 ### 3. Run Streamlit App
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 ---
@@ -124,7 +123,7 @@ python evaluate_model.py
 
 **Boya Bala Lakshmi Narasimha**
 GitHub: [https://github.com/Boya-Bala-Lakshmi-Narasimha](https://github.com/Boya-Bala-Lakshmi-Narasimha)
-
+I developed this project by using ai tools
 ---
 
 ## 📄 License
